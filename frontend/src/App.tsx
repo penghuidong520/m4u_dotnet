@@ -7,7 +7,7 @@ function App(): JSX.Element {
   return (
     <div className='app-container'>
         <div className="container">
-            <Route path="/checkout" component={widgets}/>
+            <Route path="/checkout" Component={widgets}/>
             <div className="widget">column 1</div>
             <div className="widget">column 2</div>
             <div className="widget">column 3</div>
