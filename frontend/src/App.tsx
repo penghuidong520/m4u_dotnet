@@ -6,7 +6,7 @@ import widgets from './components/widgets/widgets';
 function App(): JSX.Element {
   return (
     <div className='app-container'>
-        <div className="container">
+        <div className="widget-container">
             <Route path="/checkout" Component={widgets}/>
             <div className="widget">column 1</div>
             <div className="widget">column 2</div>
