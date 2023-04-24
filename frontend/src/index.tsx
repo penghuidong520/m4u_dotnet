@@ -1,26 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
+
 
 const rootElement = document.getElementById('root') as HTMLElement;
 
 const Root = () => (
-  // <Provider store={store}>
   <BrowserRouter>
     <App />
   </BrowserRouter>
-  // </Provider>
 );
 
 const renderApplication = () => {
-  ReactDOM.render(
+  const root = createRoot(rootElement);
+  root.render(
     <React.StrictMode>
       <Root />
-    </React.StrictMode>,
-    rootElement
+    </React.StrictMode>
   );
 };
 

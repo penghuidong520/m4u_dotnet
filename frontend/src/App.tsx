@@ -1,19 +1,16 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import './App.css';
-import widgets from './components/widgets/widgets';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import TodoPage from "./components/TodoPage";
 
 function App(): JSX.Element {
   return (
-    <div className='app-container'>
-        <div className="widget-container">
-            <Route path="/checkout" Component={widgets}/>
-            <div className="widget">column 1</div>
-            <div className="widget">column 2</div>
-            <div className="widget">column 3</div>
-            <div className="widget">column 4</div>
-            <div className="widget">column 5</div>
-        </div>
+    <div className="app-container">
+      <div className="dates-container">
+        <Routes>
+        	<Route path="/" element={<TodoPage />} />
+        </Routes>
+      </div>
     </div>
   );
 }

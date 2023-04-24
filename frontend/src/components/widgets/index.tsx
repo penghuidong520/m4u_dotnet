@@ -1,4 +1,4 @@
 import widgets from "./widgets";
-import "./CartIndex.css";
+import "./widgets.css";
 
 export default widgets;
