@@ -1,0 +1,47 @@
+/* whole container */
+.todo-calender-container {
+    margin: 5% auto;
+    width: 1000px;
+    /* height: 400px; */
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+/* calendar part container */
+/* calendar part container */
+.todo-left {
+    width: 60%;
+    padding: 20px;
+}
+
+
+.current-month-year {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* weekdays */
+.calendar-weekday-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+}
+
+.calendar-weekday {
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+/* days */
+.calendar-days-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar-days {
+    padding: 5px 0;
+    width: calc(100% / 7);
+    text-align: center;
+}
