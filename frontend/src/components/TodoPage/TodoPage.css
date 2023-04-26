@@ -6,13 +6,15 @@
     border: 1px solid black;
     display: flex;
     flex-direction: column;
+    background-color:cornflowerblue;
 }
 
 /* calendar part container */
 /* calendar part container */
 .todo-left {
     width: 60%;
-    padding: 20px;
+    margin: 20px;
+    background-color: darkslategrey;
 }
 
 
