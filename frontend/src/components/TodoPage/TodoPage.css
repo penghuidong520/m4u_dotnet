@@ -5,7 +5,16 @@
     /* height: 400px; */
     display: flex;
     justify-content: space-between;
-    background-color:cornflowerblue;
+    background-color:rgb(63, 69, 88);
+    border-radius: 5px;
+    font-size: 1rem;
+
+    /* color variables */
+    --calendar-clr: rgb(248, 248, 248);
+    --calendar-clr-dates: rgb(135, 136, 149);
+    --calendar-clr-days: rgb(182, 150, 213);
+    --calendar-clr-days-border: rgb(223, 218, 218);
+
 }
 
 /* calendar part container */
@@ -13,7 +22,8 @@
 .todo-left {
     width: 60%;
     margin: 20px;
-    background-color:deepskyblue;
+    background-color:var(--calendar-clr);
+    border-radius: 5px;
 }
 
 
@@ -21,42 +31,76 @@
     margin: 20px 0;
     display: flex;
     justify-content: center;
+    color: var(--calendar-clr-dates);
 }
 
 /* weekdays */
 .calendar-weekday-container {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-evenly; */
+    margin: 5px 10px;
 }
 
 .calendar-weekday {
-    width: calc(100% / 7);
+    width: calc(100% / 7 - 2px);
     text-align: center;
+    color: var(--calendar-clr-dates);
+    border: 1px solid transparent;
 }
 
 /* days */
 .calendar-days-container {
     display: flex;
     flex-wrap: wrap;
+    margin: 5px 10px;
 }
 
 .calendar-days {
-    padding: 5px 0;
-    width: calc(100% / 7);
-    text-align: center;
-}
-
-/* todo list container */
-.todo-right {
-    width: 40%;
-    margin: 20px;
-    background-color:darkcyan;
-}
-
-.todo-list-title {
-    margin: 20px 0;
+    width: calc(100% / 7 - 2px);
+    /* height: 0; */
+    aspect-ratio: 1/1;
+    color: var(--calendar-clr-days);
+    border: 1px solid var(--calendar-clr-days-border);
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
+.calendar-days:hover {
+    background-color: var(--calendar-clr-days);
+    color: var(--calendar-clr);
+}
+
+.selected-day {
+    background-color: var(--calendar-clr-days);
+    color: var(--calendar-clr);
+    box-shadow: 0 0 10px 2px var(--calendar-clr-days);
+}
+
+/* todo list container e.g. right container*/
+/* todo list container e.g. right container*/
+.todo-right {
+    width: 40%;
+    margin: 20px;
+}
+
+.todo-list-title-container {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-list-title-container > span:nth-child(1) {
+    font-size: 1.2rem;
+    color:rgb(240, 240, 240);
+}
+
+.todo-list-title-container > span:nth-child(2) {
+    font-size: 0.9rem;
+    color: rgb(128,128,128);
+}
+
+.todo-list-container {
+    margin: 20px;
+    display: flex;
+}
