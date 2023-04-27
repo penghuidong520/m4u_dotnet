@@ -24,12 +24,8 @@ function TodoPage(): JSX.Element {
 
   // selected date
   const [selectedDate, setSelectedDate] = useState<Date>(today);
-  const handleDayClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    const clickedDate = e.currentTarget.textContent;
-    if (clickedDate !== null) {
-      const selectedDay = new Date(today.getFullYear(), today.getMonth(), parseInt(clickedDate));
-      setSelectedDate(selectedDay);
-    }
+  const handleDayClick = (date: Date) => {
+    setSelectedDate(date);
   };
 
   // used for testing
@@ -54,7 +50,7 @@ function TodoPage(): JSX.Element {
         </div>
         <div className='calendar-days-container'>
           {dates.map((date: Date) => (
-            <div key={date.getDate()} className={`calendar-days ${date.getDate() === selectedDate.getDate() ? 'selected-day' : ''}`} onClick={handleDayClick}>
+            <div key={date.getDate()} className={`calendar-days ${date.getDate() === selectedDate.getDate() ? 'selected-day' : ''}`} onClick={()=>handleDayClick(date)}>
               <span>{date.getDate()}</span>
             </div>
           ))}

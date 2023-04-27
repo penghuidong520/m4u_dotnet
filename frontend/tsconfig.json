@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["react", "redux", "redux-thunk"],
+    "types": ["react", "redux", "redux-thunk", "redux-logger","node"],
     "target": "es6",
     "module": "commonjs",
     "strict": true,
