@@ -3,9 +3,8 @@
     margin: 5% auto;
     width: 1000px;
     /* height: 400px; */
-    border: 1px solid black;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     background-color:cornflowerblue;
 }
 
@@ -14,7 +13,7 @@
 .todo-left {
     width: 60%;
     margin: 20px;
-    background-color: darkslategrey;
+    background-color:deepskyblue;
 }
 
 
@@ -47,3 +46,17 @@
     width: calc(100% / 7);
     text-align: center;
 }
+
+/* todo list container */
+.todo-right {
+    width: 40%;
+    margin: 20px;
+    background-color:darkcyan;
+}
+
+.todo-list-title {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+

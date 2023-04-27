@@ -29,6 +29,12 @@ function TodoList(): JSX.Element {
                     ))}
                 </div>
             </div>
+            <div className='todo-right'>
+                <h2 className='todo-list-title' >Todo List</h2>
+                <div className='todo-list-container' >
+                    
+                </div>
+            </div>
         </div>
     );
 }
