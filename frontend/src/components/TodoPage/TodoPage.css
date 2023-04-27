@@ -69,6 +69,7 @@
 .calendar-days:hover {
     background-color: var(--calendar-clr-days);
     color: var(--calendar-clr);
+    cursor: pointer;
 }
 
 .selected-day {
