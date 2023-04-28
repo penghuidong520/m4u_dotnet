@@ -3,25 +3,35 @@ import thunk, { ThunkMiddleware } from 'redux-thunk';
 import logger from 'redux-logger';
 import todoListReducer from './todos';
 
-const rootReducer = combineReducers({
-	todoListReducer
+// Define RootState type
+export type RootState = {
+  todoList: ReturnType<typeof todoListReducer>
+};
+
+// Combine reducers
+const rootReducer = combineReducers<RootState>({
+  todoList: todoListReducer
 });
 
+// Middleware and enhancer setup
 const middleware = applyMiddleware(
-	thunk as ThunkMiddleware<any, AnyAction>,
-	logger
+  thunk as ThunkMiddleware<RootState, AnyAction>,
+  logger
 );
-	
+
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const enhancer = process.env.NODE_ENV === 'production'
-	? middleware
-	: composeEnhancers(middleware);
+  ? middleware
+  : composeEnhancers(middleware);
 
+// Create the store
 const configureStore = (preloadedState = {}) => createStore(
-	rootReducer,
-	preloadedState,
-	enhancer
+  rootReducer,
+  preloadedState,
+  composeEnhancers(
+    applyMiddleware(thunk, logger)
+  )
 );
-	
+
 export default configureStore;
