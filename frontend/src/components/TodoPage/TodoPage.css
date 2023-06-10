@@ -82,7 +82,8 @@
 /* todo list container e.g. right container*/
 .todo-right {
     width: 40%;
-    margin: 20px;
+    /* margin: 20px; */
+    /* padding-left: 20px; */
 }
 
 .todo-list-title-container {
@@ -102,6 +103,6 @@
 }
 
 .todo-list-container {
-    margin: 20px;
+    /* margin: 20px; */
     display: flex;
 }
