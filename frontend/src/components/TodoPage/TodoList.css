@@ -13,6 +13,7 @@
 .todo-title {
     font-size: 18px;
     font-weight: 550;
+    padding: 3px;
 }
 
 .todo-description {
