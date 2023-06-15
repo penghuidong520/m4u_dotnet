@@ -108,5 +108,6 @@
 }
 
 .todo-list-add {
-    
+    border-radius: 50%;
+    background-color: lightgray;
 }
