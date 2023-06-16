@@ -108,7 +108,13 @@
 }
 
 .todo-list-actions {
-    border-radius: 50%;
-    background-color: lightgray;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
 
+.add-button {
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
