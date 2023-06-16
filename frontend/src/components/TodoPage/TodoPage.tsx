@@ -76,9 +76,8 @@ function TodoPage(): JSX.Element {
 					<TodoList todos={todoList} />
 				</div>
 
-				<button className='todo-list-add' onClick={handleAddTodo}>
+				<button className='todo-list-actions' onClick={handleAddTodo}>
 					<FontAwesomeIcon icon={faPlus} />
-					<span>+</span>
 				</button>
 
 			</div>

@@ -107,7 +107,7 @@
     display: flex;
 }
 
-.todo-list-add {
+.todo-list-actions {
     border-radius: 50%;
     background-color: lightgray;
 }
