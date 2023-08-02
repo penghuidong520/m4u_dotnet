@@ -33,6 +33,7 @@ function TodoPage(): JSX.Element {
 			id: Math.floor(Math.random() * 1000),
 			title: 'New Todo Item',
 			description: 'something new',
+			time: '18:00'
 		};
 		dispatch(addTodoAction(selectedDate.toLocaleDateString(), newTodoItem));
 	};
@@ -76,7 +77,7 @@ function TodoPage(): JSX.Element {
 				</div>
 
 				<div className='todo-list-actions' onClick={handleAddTodo}>
-					<FontAwesomeIcon  id='todo-plus' icon={faPlus} size='xl' />
+					<FontAwesomeIcon  id='todo-plus' icon={faPlus} size='2x' />
 				</div>
 
 			</div>

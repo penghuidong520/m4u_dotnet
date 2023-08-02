@@ -3,6 +3,7 @@ export interface TodoItem {
 	id: number;
 	title: string;
 	description: string;
+	time: string;
 }
 
 interface TodoListState {
@@ -76,17 +77,7 @@ function editTodoAction(date: string, todoId: number, updatedTodo: TodoItem): Ed
 type TodoListAction = AddTodoAction | DeleteTodoAction | EditTodoAction;
 
 // preload
-const initialState: TodoListState = {
-'4/28/2023': [
-	{ id: 1, title: 'Todo 1', description: 'Description 1' },
-	{ id: 2, title: 'Todo 2', description: 'Description 2' },
-	{ id: 3, title: 'Todo 3', description: 'Description 3' },
-],
-'4/29/2023': [
-	{ id: 4, title: 'Todo 4', description: 'Description 4' },
-	{ id: 5, title: 'Todo 5', description: 'Description 5' },
-]
-};
+const initialState: TodoListState = { };
 
 function todoListReducer(state: TodoListState = initialState, action: TodoListAction): TodoListState {
 switch (action.type) {

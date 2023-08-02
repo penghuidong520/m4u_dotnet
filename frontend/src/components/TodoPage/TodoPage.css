@@ -84,8 +84,7 @@
 /* todo list container e.g. right container*/
 .todo-right {
     width: 40%;
-    /* margin: 20px; */
-    /* padding-left: 20px; */
+    position: relative;
 }
 
 .todo-list-title-container {
@@ -107,11 +106,30 @@
 .todo-list-container {
     /* margin: 20px; */
     display: flex;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-right: 5px;
 }
+
+.todo-list-container::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .todo-list-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+  }
+  
+  .todo-list-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
 
 .todo-list-actions {
     display: flex;
     justify-content: flex-end;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
     width: 100%;
 }
 
