@@ -21,11 +21,22 @@
     cursor: pointer;
 }
 
+.todo-item-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
 .todo-title {
     font-size: 18px;
     font-weight: 550;
     padding: 3px;
     margin: 3px 0;
+}
+
+.todo-time {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
 }
 
 .todo-description {
