@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import TodoList from './TodoList';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../store';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { addTodoAction,TodoItem } from '../../store/todos'
 
 // used for testing
@@ -76,9 +76,7 @@ function TodoPage(): JSX.Element {
 				</div>
 
 				<div className='todo-list-actions' onClick={handleAddTodo}>
-					{/* <span className='add-button'><i className="fa-sharp fa-solid fa-plus"></i></span> */}
-					<FontAwesomeIcon className='add-button' icon={faPlus} />
-					{/* font awesome may not work pay attention */}
+					<FontAwesomeIcon  id='todo-plus' icon={faPlus} size='xl' />
 				</div>
 
 			</div>

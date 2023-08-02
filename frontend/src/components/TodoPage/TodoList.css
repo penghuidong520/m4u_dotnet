@@ -18,6 +18,7 @@
 .todo-item:hover {
     border: 1px solid rgb(156, 193, 214);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .todo-title {

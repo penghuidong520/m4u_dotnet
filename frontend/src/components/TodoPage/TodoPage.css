@@ -1,19 +1,21 @@
 /* whole container */
 .todo-calender-container {
+    /* color variables */
+    --background-color: rgb(63,69,88);
+    --calendar-clr: rgb(248, 248, 248);
+    --calendar-clr-dates: rgb(135, 136, 149);
+    --calendar-clr-days: rgb(182, 150, 213);
+    --calendar-clr-days-border: rgb(223, 218, 218);
+
     margin: 5% auto;
     width: 1000px;
     /* height: 400px; */
     display: flex;
     justify-content: space-between;
-    background-color:rgb(63, 69, 88);
+    background-color:var(--background-color);
     border-radius: 5px;
     font-size: 1rem;
-
-    /* color variables */
-    --calendar-clr: rgb(248, 248, 248);
-    --calendar-clr-dates: rgb(135, 136, 149);
-    --calendar-clr-days: rgb(182, 150, 213);
-    --calendar-clr-days-border: rgb(223, 218, 218);
+    
 
 }
 
@@ -113,8 +115,13 @@
     width: 100%;
 }
 
-.add-button {
-    justify-content: center;
-    align-items: center;
-    background-color: lightgray;
+#todo-plus {
+    color: white;
+    border: 1px solid var(--calendar-clr);
+    border-radius: 50%;
+}
+
+#todo-plus:hover {
+    background-color: var(--calendar-clr);
+    color: rgb(63,69, 88);
 }
