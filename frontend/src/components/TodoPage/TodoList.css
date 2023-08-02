@@ -1,6 +1,8 @@
 .todo-items-container {
     border: solid 1px white;
+    width: 100%;
     padding: 0 20px;
+    margin: 0 20px;
 }
 
 .todo-item {
@@ -8,6 +10,8 @@
     list-style-type: disc;
     color: gray;
     margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(156, 193, 214);
 }
 
 .todo-title {

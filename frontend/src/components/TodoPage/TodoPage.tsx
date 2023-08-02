@@ -29,7 +29,6 @@ function TodoPage(): JSX.Element {
 	};
 
 	const handleAddTodo = () => {
-		console.log('here')
 		const newTodoItem: TodoItem = {
 			id: Math.floor(Math.random() * 1000),
 			title: 'New Todo Item',
